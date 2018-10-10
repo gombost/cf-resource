@@ -52,7 +52,7 @@ func (cf *CloudFoundry) PushApp(
 	noStart bool,
 ) error {
 	args := []string{}
-
+	fmt.Printf("current app name: %s", currentAppName)
 	if currentAppName == "" {
 		args = append(args, "push", "-f", manifest)
 		if noStart {
